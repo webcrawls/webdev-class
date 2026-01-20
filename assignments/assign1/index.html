@@ -1,27 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=1, initial-scale=1.0">
     <title>Index - Kaden's Portfolio</title>
+
+
+    <style>
+        body {
+            background-color: gray;
+            background-image: url("/assets/bg-graylace.png");
+            margin: 0;
+            padding: 0;
+
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: min-content 1fr;
+        }
+
+        body>main {
+            grid-row: 2;
+            grid-column: 2;
+        }
+
+        body>aside {
+            grid-row: 2;
+            grid-column: 1;
+        }
+
+        body>header {
+            grid-row: 1;
+            grid-column: 1 / -1;
+        }
+
+        .container {
+            background-color: white;
+            color: black;
+            box-shadow: 10px 10px black;
+            padding-inline: 1rem;
+            padding-block: 0.5rem;
+            margin-inline: 2rem;
+        }
+
+        main {
+            width: 100%;
+            max-width: 60ch;
+        }
+
+        h1 {
+            padding-inline: 2rem;
+            background-image: linear-gradient(to right, white, gray);
+        }
+
+        #socials>ul {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            width: 100%;
+            justify-content: flex-start;
+        }
+
+        #socials li {
+            list-style-type: none;
+            width: min-content;
+            white-space: nowrap;
+            padding: 0;
+        }
+    </style>
 </head>
+
+<!-- todo: light/dark mode -->
+<!-- todo: visitor counter -->
+<!-- todo story: minecraft chat bots; simulate the chat UI-->
+<!-- todo use ascii fixedwidth chars n shit type vibes-->
+<!-- wave accessibility tool -->
+<!-- w3c validator -->
+<!-- page logo from webbys world ------>
+
 <body>
-    <h1>WORLD WIDE KADEN</h1>
-    <!-- todo: light/dark mode -->
-    <!-- todo: visitor counter -->
-     <p>Yeah i love making websites what is it to you</p>
-     <ul>
-        <li><a href="https://borderlinefever.neocities.org/">INTERFERENCE PATTERN</a> (made for a Sheridan film capstone)</li>
-        <li><a href="https://github.com/webcrawls">Some other stuff</a></li>
-        <li>And this page.... (<a href="#">I even got that code on github bruh ask bout me</a>)</li>
-     </ul>
-     <hr>
-     <!-- Wendy says no </>, I have been living  a lie. <hr/> Lives on in my Heart. -->
+    <header>
+        <h1>KADEN'S WORLD</h1>
+    </header>
 
-     <p>born in bc. grew too powerful, God punted me to Ontario when i was 12.</p>
+    <main>
+        <article class="container">
+            <h2>On the Net™</h2>
+            <p>Yeah i love making websites what is it to you</p>
+            <ul>
+                <li><a href="https://borderlinefever.neocities.org/">INTERFERENCE PATTERN</a> (made for a Sheridan film
+                    capstone)</li>
+                <li><a href="https://github.com/webcrawls">Some other stuff</a></li>
+                <li>And this page.... (<a href="#">I even got that code on github bruh ask bout me</a>)</li>
+            </ul>
+            <hr />
+            <nav id="socials">
+                <ul>
+                    <li><a href="#">github</a></li>
+                    <li><a href="#">instagram</a></li>
+                    <li>me webersite (comig soon)</li>
+                </ul>
+            </nav>
+        </article>
 
-     <style>
+        <!-- Wendy says no </>, I have been living  a lie. <hr/> Lives on in my Heart. -->
+        <!-- -->
 
-     </style>
+        <article class="container">
+            <p>born in bc. grew too powerful, God punted me to Ontario when i was 12.</p>
+            <p></p>
+        </article>
+    </main>
+
+    <aside class="container">
+        <!-- nav here -->
+
+        <nav>
+            <ul>
+                <li><a href="#">Assn 1</a></li>
+                <li><a href="#">Assn 2</a></li>
+                <li><a href="#">Assn 3</a></li>
+                <li><a href="#">Assn 4</a></li>
+            </ul>
+        </nav>
+    </aside>
 </body>
+
 </html>
