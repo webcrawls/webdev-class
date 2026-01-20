@@ -2,16 +2,16 @@ on: push
 name: 🚀 Deploy website on push
 jobs:
   web-deploy:
-    name: 🎉 Deploy
-    runs-on: ubuntu-latest
-    steps:
-    - name: 🚚 Get latest code
-      uses: actions/checkout@v4
-    
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+
+    - name: "Checkout"
+      uses: actions/checkout@v6
       with:
-        server: dev.fast.sheridanc.on.ca
-        username: swallowk
-        protocol: sftp
-        password: ${{ secrets.ftp_password }}
+        fetch-depth: 0
+    - name: "Deploy"
+      uses: milanm/actions-file-deployer@master
+      with:
+        remote-protocol: "sftp"
+        remote-host: "dev.fast.sheridanc.on.ca"
+        remote-user: "swallowk"
+        ssh-private-key: ${{ secrets.DEPLOY_PRIVATE_KEY }}
+        remote-path: "/data/home/swallowk/public_html"
