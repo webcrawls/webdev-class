@@ -16,4 +16,4 @@ jobs:
           remote-host: "dev.fast.sheridanc.on.ca"
           remote-user: "swallowk"
           ssh-private-key: ${{ secrets.DEPLOY_PRIVATE_KEY }}
-          remote-path: "/data/home/swallowk/public_html"
+          remote-path: "."
